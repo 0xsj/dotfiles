@@ -43,7 +43,6 @@ alias ls='exa'
 alias ll='exa -Fl'
 alias lla='exa -aFl --color=auto'
 alias tree='exa -T'
-
-
+alias python=python3
 
 
