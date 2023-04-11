@@ -10,6 +10,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions web-search)
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 export ZSH="/Users/tommy/.oh-my-zsh"
+export PATH="/users/tommy/anaconda3/bin:$PATH"
 # load oh my zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -44,5 +45,4 @@ alias ll='exa -Fl'
 alias lla='exa -aFl --color=auto'
 alias tree='exa -T'
 alias python=python3
-
 
