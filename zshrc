@@ -34,8 +34,7 @@ export PATH="$PATH:/Users/tommy/.foundry/bin"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/golib
 
-
-# java
+#jv
 export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 . "$HOME/.cargo/env"
 
@@ -46,3 +45,18 @@ alias lla='exa -aFl --color=auto'
 alias tree='exa -T'
 alias python=python3
 
+# Always start tmux with correct configuration
+if [[ $DISPLAY && -z "$TMUX" ]]; then
+	SESSIONS="$( tmux ls )"
+	DETACHED_SESSION="$( tmux ls | grep -vm1 attached | cut -d: -f1 )"
+
+	if [[ -z "$DETACHED_SESSION" ]]; then
+		if [[ -z "$SESSIONS" ]]; then
+			exec tmuxinator start home
+		else
+			exec tmux new-session
+		fi
+	else
+		exec tmux attach-session -t $DETACHED_SESSION
+	fi
+fi
