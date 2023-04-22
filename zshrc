@@ -40,10 +40,6 @@ export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 
 # aliases
 alias ls='exa'
-alias ll='exa -Fl'
-alias lla='exa -aFl --color=auto'
-alias tree='exa -T'
-alias python=python3
 
 # Always start tmux with correct configuration
 if [[ $DISPLAY && -z "$TMUX" ]]; then
