@@ -13,6 +13,7 @@ capabilities = vim.tbl_deep_extend(
 local servers = {
   "lua_ls",
   "ts_ls",
+  "svelte",
   "gopls",
   "rust_analyzer",
   "pyright",

@@ -3,10 +3,15 @@ return {
   -- Core DAP
   {
     "mfussenegger/nvim-dap",
+    event = "VeryLazy",
     dependencies = {
       -- UI for DAP
-      "rcarriga/nvim-dap-ui",
-      "nvim-neotest/nvim-nio",
+      {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+          { "nvim-neotest/nvim-nio", lazy = false },
+        },
+      },
       
       -- Virtual text showing variable values
       "theHamsta/nvim-dap-virtual-text",

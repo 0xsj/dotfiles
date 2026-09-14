@@ -8,7 +8,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>cs", "<cmd>Cheatsheet<cr>", desc = "Cheatsheet" },
+      { "<leader>ch", "<cmd>Cheatsheet<cr>", desc = "Cheatsheet" },
     },
     config = function()
       require("cheatsheet").setup({

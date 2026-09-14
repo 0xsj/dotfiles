@@ -65,6 +65,11 @@ return {
         vim.cmd("ToggleTerm direction=float")
       end, { desc = "Toggle Floating Terminal" })
 
+      -- Terminal in current file's directory
+      vim.keymap.set("n", "<leader>td", function()
+        vim.cmd("ToggleTerm dir=%:p:h direction=float")
+      end, { desc = "Terminal in File Directory" })
+
       -- Lazygit integration (if you have lazygit installed)
       local lazygit = Terminal:new({
         cmd = "lazygit",

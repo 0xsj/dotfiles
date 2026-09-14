@@ -36,10 +36,10 @@ return {
           end, { expr = true, desc = "Prev Hunk" })
 
           -- Actions
-          map("n", "<leader>hs", gs.stage_hunk, { desc = "Stage Hunk" })
-          map("n", "<leader>hr", gs.reset_hunk, { desc = "Reset Hunk" })
-          map("n", "<leader>hp", gs.preview_hunk, { desc = "Preview Hunk" })
-          map("n", "<leader>hb", function() gs.blame_line({ full = true }) end, { desc = "Blame Line" })
+          map("n", "<leader>Hs", gs.stage_hunk, { desc = "Stage Hunk" })
+          map("n", "<leader>Hr", gs.reset_hunk, { desc = "Reset Hunk" })
+          map("n", "<leader>Hv", gs.preview_hunk, { desc = "Preview Hunk" })
+          map("n", "<leader>Hb", function() gs.blame_line({ full = true }) end, { desc = "Blame Line" })
         end
       })
     end

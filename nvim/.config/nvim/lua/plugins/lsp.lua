@@ -19,6 +19,7 @@ return {
         ensure_installed = {
           "lua_ls",        -- Lua
           "ts_ls",         -- TypeScript/JavaScript
+          "svelte",        -- Svelte
           "gopls",         -- Go
           "rust_analyzer", -- Rust
           "pyright",       -- Python

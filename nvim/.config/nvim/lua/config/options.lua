@@ -1,28 +1,34 @@
 -- opts
 local options = {
-	-- TODO: change this to a single line
 	guicursor = "",
 
 	-- numbered lines
-	nu = true,
+	number = true,
 
 	-- relative line numbers
 	relativenumber = true,
 
 	-- how many spaces do you want your tab to be?
 	shiftwidth = 2,
-	autoindent = false,
+	expandtab = true,
 	tabstop = 2,
-	softtabstop = 1,
+	softtabstop = 2,
 	smartindent = false,
 
 	wrap = false,
 
 
-	signcolumn = "yes"
-
+	signcolumn = "yes",
 }
 
 for key, value in pairs(options) do
 	vim.opt[key] = value
 end
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true
+	end,
+})

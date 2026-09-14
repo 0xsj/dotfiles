@@ -27,6 +27,7 @@ return {
         { "<leader>fg", desc = "Live Grep" },
         { "<leader>fb", desc = "Buffers" },
         { "<leader>fh", desc = "Help Tags" },
+        { "<leader>pv", desc = "Open File Explorer" },
 
         -- Git group
         { "<leader>g", group = "Git" },
@@ -49,10 +50,13 @@ return {
         { "<leader>ha", desc = "Add File" },
         { "<leader>hn", desc = "Next File" },
         { "<leader>hp", desc = "Previous File" },
-        { "<leader>hs", desc = "Stage Hunk" },
-        { "<leader>hr", desc = "Reset Hunk" },
-        { "<leader>hp", desc = "Preview Hunk" },
-        { "<leader>hb", desc = "Blame Line" },
+
+        -- Git hunk actions
+        { "<leader>H", group = "Hunks" },
+        { "<leader>Hb", desc = "Blame Line" },
+        { "<leader>Hr", desc = "Reset Hunk" },
+        { "<leader>Hs", desc = "Stage Hunk" },
+        { "<leader>Hv", desc = "Preview Hunk" },
 
         -- Terminal group
         { "<leader>t", group = "Terminal" },
@@ -62,34 +66,36 @@ return {
         { "<leader>tg", desc = "Lazygit" },
 
         -- Debug group
-        { "<leader>d", group = "Debug/Database" },
-        { "<leader>db", desc = "Toggle Breakpoint / Database UI" },
+        { "<leader>d", group = "Debug" },
+        { "<leader>db", desc = "Toggle Breakpoint" },
         { "<leader>dB", desc = "Conditional Breakpoint" },
         { "<leader>dc", desc = "Continue" },
         { "<leader>dC", desc = "Run to Cursor" },
-        { "<leader>df", desc = "Find Database Buffer" },
         { "<leader>dg", desc = "Go to Line" },
         { "<leader>di", desc = "Step Into" },
         { "<leader>dj", desc = "Down" },
         { "<leader>dk", desc = "Up" },
-        { "<leader>dl", desc = "Run Last / Last Query Info" },
+        { "<leader>dl", desc = "Run Last" },
         { "<leader>do", desc = "Step Out" },
         { "<leader>dO", desc = "Step Over" },
         { "<leader>dp", desc = "Pause" },
-        { "<leader>dr", desc = "Toggle REPL / Rename Buffer" },
+        { "<leader>dr", desc = "Toggle REPL" },
         { "<leader>ds", desc = "Session" },
         { "<leader>dt", desc = "Terminate" },
         { "<leader>dw", desc = "Widgets" },
         { "<leader>du", desc = "Toggle UI" },
 
-        -- Explorer group
-        { "<leader>e", group = "Explorer" },
-        { "<leader>e", desc = "Toggle Explorer" },
-        { "<leader>ef", desc = "Find in Explorer" },
+        -- Database group
+        { "<leader>D", group = "Database" },
+        { "<leader>Db", desc = "Toggle Database UI" },
+        { "<leader>Df", desc = "Find Database Buffer" },
+        { "<leader>Dl", desc = "Last Query Info" },
+        { "<leader>Dr", desc = "Rename Buffer" },
 
         -- Code/LSP group
         { "<leader>c", group = "Code" },
         { "<leader>ca", desc = "Code Action" },
+        { "<leader>ch", desc = "Cheatsheet" },
         { "<leader>cs", desc = "Symbols (Trouble)" },
         { "<leader>cl", desc = "LSP Definitions/References" },
 
@@ -99,11 +105,13 @@ return {
         { "<leader>xX", desc = "Buffer Diagnostics" },
         { "<leader>xL", desc = "Location List" },
         { "<leader>xQ", desc = "Quickfix List" },
+        { "<leader>xd", desc = "Show Diagnostic" },
         { "<leader>xt", desc = "Todo (Trouble)" },
         { "<leader>xT", desc = "Todo/Fix/Fixme" },
 
         -- Search group
         { "<leader>s", group = "Search" },
+        { "<leader>sr", desc = "Search and replace" },
         { "<leader>st", desc = "Search Todos" },
 
         -- Buffer group
@@ -130,8 +138,6 @@ return {
         -- Diagnostics navigation
         { "[d", desc = "Previous Diagnostic" },
         { "]d", desc = "Next Diagnostic" },
-        { "<leader>d", desc = "Show Diagnostic" },
-        
         -- Todo navigation
         { "[t", desc = "Previous Todo" },
         { "]t", desc = "Next Todo" },

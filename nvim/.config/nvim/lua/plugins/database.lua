@@ -26,10 +26,10 @@ return {
       vim.g.db_ui_save_location = vim.fn.stdpath("data") .. "/db_ui_queries"
 
       -- Keymaps
-      vim.keymap.set("n", "<leader>db", "<cmd>DBUIToggle<cr>", { desc = "Toggle Database UI" })
-      vim.keymap.set("n", "<leader>df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find Database Buffer" })
-      vim.keymap.set("n", "<leader>dr", "<cmd>DBUIRenameBuffer<cr>", { desc = "Rename Database Buffer" })
-      vim.keymap.set("n", "<leader>dl", "<cmd>DBUILastQueryInfo<cr>", { desc = "Last Query Info" })
+      vim.keymap.set("n", "<leader>Db", "<cmd>DBUIToggle<cr>", { desc = "Toggle Database UI" })
+      vim.keymap.set("n", "<leader>Df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find Database Buffer" })
+      vim.keymap.set("n", "<leader>Dr", "<cmd>DBUIRenameBuffer<cr>", { desc = "Rename Database Buffer" })
+      vim.keymap.set("n", "<leader>Dl", "<cmd>DBUILastQueryInfo<cr>", { desc = "Last Query Info" })
     end,
   },
   {
